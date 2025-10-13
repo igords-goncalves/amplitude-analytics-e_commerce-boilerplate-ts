@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import * as analytics from '../src/analytics';
+import * as analytics from '../src/amplitude';
 import { ExperimentWrapper } from '../src/components/ExperimentWrapper';
 import { EVENTS } from '../src/events';
 

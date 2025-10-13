@@ -1,7 +1,7 @@
-import { trackEvent } from '../src/analytics';
-import amplitude from 'amplitude-js';
+import { trackEvent } from '../src/amplitude';
+import * as amplitude from '@amplitude/analytics-browser';
 
-jest.mock('amplitude-js', () => ({
+jest.mock('amplitude', () => ({
   getInstance: jest.fn(() => ({
     logEvent: jest.fn(),
   })),
@@ -10,7 +10,7 @@ jest.mock('amplitude-js', () => ({
 describe('Amplitude Tracking', () => {
   it('envia evento corretamente', () => {
     const mockLog = jest.fn();
-    (amplitude.getInstance as jest.Mock).mockReturnValue({ logEvent: mockLog });
+    (amplitude.init as jest.Mock).mockReturnValue({ logEvent: mockLog });
 
     trackEvent('test_event', { key: 'value' });
 
