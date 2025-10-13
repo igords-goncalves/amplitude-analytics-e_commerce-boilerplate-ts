@@ -1,32 +1,19 @@
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": [
-      "DOM",
-      "ES2020"
-    ],
-    "allowJs": false,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "types": [
-      "jest",
-      "node"
-    ]
-  },
-  "include": [
-    "src",
-    "__tests__",
-    "cypress"
-  ],
-  "references": []
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "_version": "22.0.0",
+
+    "compilerOptions": {
+        "lib": ["ES2023", "DOM"],
+        "module": "nodenext",
+        "target": "ES2023",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "moduleResolution": "node",
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "types": ["jest", "node"]
+    },
+    "include": ["src"],
+    "references": [{ "path": "./tsconfig.node.json" }]
 }
