@@ -33,7 +33,7 @@ A complete React boilerplate application demonstrating analytics implementation 
 3. **Environment setup** (Optional):
    Create a `.env` file and add your Amplitude API key:
    ```
-   NEXT_PUBLIC_AMPLITUDE_API_KEY=your_amplitude_api_key_here
+   AMPLITUDE_API_KEY=your_amplitude_api_key_here
    ```
 
 ## 🏃‍♂️ Running the Application
