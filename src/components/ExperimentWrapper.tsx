@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { trackEvent } from '../analytics';
+import { useEffect, useState } from 'react';
 import { EVENTS } from '../events';
+import AmplitudeInitializer, { amplitude } from '../amplitude';
 
 function getFeatureFlagVariant(flagKey: string): 'control' | 'variant' {
   const variants: Array<'control'|'variant'> = ['control', 'variant'];
@@ -8,6 +8,7 @@ function getFeatureFlagVariant(flagKey: string): 'control' | 'variant' {
 }
 
 export function ExperimentWrapper() {
+  const amplitudeInitializer = new AmplitudeInitializer();
   const [variant, setVariant] = useState<'control'|'variant' | null>(null);
   const experimentKey = 'new_checkout_button';
 
@@ -15,7 +16,7 @@ export function ExperimentWrapper() {
     const assignedVariant = getFeatureFlagVariant(experimentKey);
     setVariant(assignedVariant);
 
-    trackEvent(EVENTS.EXPERIMENT_VIEW.name, {
+    amplitude.track(EVENTS.EXPERIMENT_VIEW.name, {
       [EVENTS.EXPERIMENT_VIEW.props.EXPERIMENT_KEY]: experimentKey,
       [EVENTS.EXPERIMENT_VIEW.props.VARIANT]: assignedVariant,
     });

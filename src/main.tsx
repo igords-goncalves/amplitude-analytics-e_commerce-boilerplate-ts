@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { initAmplitude } from './analytics';
 import { AddToCartButton } from './components/AddToCartButton';
 import { ExperimentWrapper } from './components/ExperimentWrapper';
+import AmplitudeInitializer from './amplitude';
+import './global.css';
 
-initAmplitude();
+const amplitudeInitializer = new AmplitudeInitializer();
+
+amplitudeInitializer.init();
 
 const product = { id: '1', name: 'Produto Teste', price: 49.9 };
 

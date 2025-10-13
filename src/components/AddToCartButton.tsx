@@ -1,6 +1,5 @@
-import React from 'react';
-import { trackEvent } from '../analytics';
 import { EVENTS } from '../events';
+import AmplitudeInitializer, { amplitude } from '../amplitude';
 
 type Product = {
   id: string;
@@ -8,9 +7,12 @@ type Product = {
   price: number;
 };
 
+
 export function AddToCartButton({ product }: { product: Product }) {
+  const amplitudeInitializer = new AmplitudeInitializer();
+  
   const handleClick = () => {
-    trackEvent(EVENTS.ADD_TO_CART.name, {
+    amplitude.track(EVENTS.ADD_TO_CART.name, {
       [EVENTS.ADD_TO_CART.props.PRODUCT_ID]: product.id,
       [EVENTS.ADD_TO_CART.props.PRODUCT_NAME]: product.name,
       [EVENTS.ADD_TO_CART.props.PRICE]: product.price,
