@@ -8,8 +8,8 @@ type Product = {
 };
 
 export function AddToCartButton({ product }: { product: Product }) {
-  const amplitudeInitializer = new AmplitudeInitializer();
-  amplitudeInitializer.init();
+  const amplitudeInitializer = AmplitudeInitializer.getInstance();
+  
   const handleClick = () => {
     amplitudeInitializer.trackEvent(EVENTS.ADD_TO_CART.name, {
       [EVENTS.ADD_TO_CART.props.PRODUCT_ID]: product.id,

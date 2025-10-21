@@ -8,9 +8,8 @@ function getFeatureFlagVariant(flagKey: string): 'control' | 'variant' {
 }
 
 export function ExperimentWrapper() {
-  //~~! A classe não está sendo usada.
-  const amplitudeInitializer = new AmplitudeInitializer();
-  amplitudeInitializer.init();  
+  const amplitudeInitializer = AmplitudeInitializer.getInstance();
+  
   const [variant, setVariant] = useState<'control'|'variant' | null>(null);
   // Experiment flag
   const experimentKey = 'new_checkout_button';
