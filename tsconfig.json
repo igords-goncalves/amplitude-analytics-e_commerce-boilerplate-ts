@@ -4,7 +4,7 @@
 
     "compilerOptions": {
         "lib": ["ES2023", "DOM"],
-        "module": "nodenext",
+        "module": "esnext",
         "target": "ES2023",
         "strict": true,
         "esModuleInterop": true,
