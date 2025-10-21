@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { EVENTS } from '../events';
-import AmplitudeInitializer, { amplitude } from '../amplitude';
+import { EVENTS } from '../constants/events';
+import AmplitudeInitializer from '../services/AmplitudeInitializer';
 
 function getFeatureFlagVariant(flagKey: string): 'control' | 'variant' {
   const variants: Array<'control'|'variant'> = ['control', 'variant'];
@@ -8,15 +8,18 @@ function getFeatureFlagVariant(flagKey: string): 'control' | 'variant' {
 }
 
 export function ExperimentWrapper() {
+  //~~! A classe não está sendo usada.
   const amplitudeInitializer = new AmplitudeInitializer();
+  amplitudeInitializer.init();  
   const [variant, setVariant] = useState<'control'|'variant' | null>(null);
+  // Experiment flag
   const experimentKey = 'new_checkout_button';
 
   useEffect(() => {
     const assignedVariant = getFeatureFlagVariant(experimentKey);
     setVariant(assignedVariant);
 
-    amplitude.track(EVENTS.EXPERIMENT_VIEW.name, {
+    amplitudeInitializer.trackEvent(EVENTS.EXPERIMENT_VIEW.name, {
       [EVENTS.EXPERIMENT_VIEW.props.EXPERIMENT_KEY]: experimentKey,
       [EVENTS.EXPERIMENT_VIEW.props.VARIANT]: assignedVariant,
     });
