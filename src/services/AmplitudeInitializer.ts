@@ -47,11 +47,9 @@ export default class AmplitudeInitializer {
 
     trackEvent(eventName: string, eventProps: Record<string, any> = {}) {
         if (!this.initialized) {
-            console.warn('Amplitude not initialized. Call initAmplitude() before tracking events.');
+            console.warn('Amplitude not initialized. Call init() before tracking events.');
             return;
         }
         amplitude.track(eventName, eventProps);
     }
 }
-
-export { amplitude };
