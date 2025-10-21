@@ -2,13 +2,15 @@ import * as amplitude from '@amplitude/analytics-browser';
 
 export default class AmplitudeInitializer {
     private initialized: boolean;
+    private apiKey?: string;
     
     constructor() {
         this.initialized = false;
+        this.apiKey = process.env.AMPLITUDE_API_KEY;
     }
-    
+
     async init() {
-        const apiKey = process.env.AMPLITUDE_API_KEY || '';
+        const apiKey = this.apiKey;
 
         if (!apiKey) {
             console.error('Amplitude API key is missing. Please set AMPLITUDE_API_KEY in your environment variables.');
@@ -21,17 +23,21 @@ export default class AmplitudeInitializer {
         } 
 
         try {
+            /**
+             * Retorna um objeto com a propriedade "promise",
+             * que já resolve quando a inicialização estiver completa
+             */
             await amplitude.init(apiKey, {
                 autocapture: {
                     pageViews: false,
                 },
             }).promise;
 
-            console.info('Amplitude initialized');
             this.initialized = true;
+            console.info('Amplitude initialized');
         } catch (error) {
             console.error('Failed to initialize Amplitude:', error);
-            return;
+            throw new Error('Amplitude initialization failed: ' + (error as Error).message);
         }
     }
 
@@ -39,7 +45,7 @@ export default class AmplitudeInitializer {
         return typeof window !== 'undefined';
     }
 
-    async trackEvent(eventName: string, eventProps: Record<string, any> = {}) {
+    trackEvent(eventName: string, eventProps: Record<string, any> = {}) {
         if (!this.initialized) {
             console.warn('Amplitude not initialized. Call initAmplitude() before tracking events.');
             return;
