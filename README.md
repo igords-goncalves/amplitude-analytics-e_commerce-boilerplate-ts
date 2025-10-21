@@ -135,25 +135,46 @@ export const EVENTS = {
 ## 📁 Project Structure
 
 ```bash
-src/
-├── amplitude.ts           # Amplitude SDK setup and tracking functions
-├── events.ts             # Centralized event definitions
-├── main.tsx              # App entry point
-├── global.d.ts           # TypeScript global definitions
-└── components/
-    ├── AddToCartButton.tsx    # E-commerce tracking component
-    └── ExperimentWrapper.tsx  # A/B testing component
-
-__tests__/
-├── AddToCartButton.test.tsx   # Component unit tests
-├── analytics.test.ts          # Analytics tracking tests
-└── ExperimentWrapper.test.tsx # Experiment component tests
-
-cypress/
-├── e2e/
-│   └── spec.cy.ts        # End-to-end test scenarios
-├── fixtures/
-└── support/
+amplitude-analytics-boilerplate-ts/
+├── app.feature                          # App feature documentation
+├── cypress.config.ts                    # Cypress configuration
+├── index.html                           # HTML entry point
+├── insights.todo                         # Project insights and todos
+├── jest.config.cjs                      # Jest testing configuration
+├── package.json                         # Dependencies and scripts
+├── README.md                            # Project documentation
+├── tsconfig.json                        # TypeScript configuration
+├── tsconfig.node.json                   # Node.js TypeScript config
+├── vite.config.ts                       # Vite build configuration
+├── __tests__/                           # Test files
+│   ├── AddToCartButton.test.tsx         # AddToCartButton component tests
+│   ├── analytics.test.ts                # Analytics tracking tests
+│   └── ExperimentWrapper.test.tsx       # ExperimentWrapper component tests
+├── cypress/                             # E2E testing
+│   ├── tsconfig.json                    # Cypress TypeScript config
+│   ├── e2e/
+│   │   └── spec.cy.ts                   # End-to-end test scenarios
+│   ├── fixtures/
+│   │   └── example.json                 # Test data fixtures
+│   └── support/
+│       ├── commands.ts                  # Custom Cypress commands
+│       └── e2e.ts                       # E2E test setup
+└── src/                                 # Source code
+    ├── global.css                       # Global styles
+    ├── global.d.ts                      # TypeScript global definitions
+    ├── main.tsx                         # App entry point
+    ├── components/                      # React components
+    │   ├── AddToCartButton.tsx          # E-commerce tracking component
+    │   └── ExperimentWrapper.tsx        # A/B testing component
+    ├── constants/                       # Application constants
+    │   └── events.ts                    # Centralized event definitions
+    ├── database/                        # Data layer
+    │   └── product.ts                   # Product data models
+    ├── hooks/                           # Custom React hooks
+    ├── pages/                           # Page components
+    │   └── home.tsx                     # Home page component
+    └── services/                        # Service layer
+        └── AmplitudeInitializer.ts      # Amplitude SDK setup and initialization
 ```
 
 ## 🔧 Configuration Files
