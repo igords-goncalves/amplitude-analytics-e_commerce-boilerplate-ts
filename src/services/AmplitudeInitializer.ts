@@ -1,5 +1,6 @@
 import * as amplitude from "@amplitude/analytics-browser";
 
+// Essa classe segue os princípios de SRP (Single Responsibility Principle)
 export default class AmplitudeInitializer {
     private static instance: AmplitudeInitializer;
     private initialized: boolean;
@@ -67,6 +68,11 @@ export default class AmplitudeInitializer {
         }
     }
 
+    /**
+     * Envia um evento para o Amplitude
+     * @param eventName Nome do evento
+     * @param eventProps Propriedades do evento
+     */
     async trackEvent(eventName: string, eventProps: Record<string, any> = {}) {
         if (!this.initialized) {
             console.warn("Amplitude not initialized. Unable to track event.");
