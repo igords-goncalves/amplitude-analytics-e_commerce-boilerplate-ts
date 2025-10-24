@@ -62,6 +62,9 @@ jobs:
     
     - name: Build project
       run: npm run build
+
+    - name: Start application
+      run: npm run preview
     
     - name: Run Cypress tests
       run: npm run cypress:headless
