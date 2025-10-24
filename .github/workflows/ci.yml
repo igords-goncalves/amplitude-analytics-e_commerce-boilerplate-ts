@@ -63,11 +63,11 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Start application
-      run: npm run preview
-    
     - name: Run Cypress tests
-      run: npm run cypress:headless
+      run: |
+        npm run preview &
+        npx wait-on http://localhost:4173 --timeout 30000
+        npm run cypress:headless
 
   lint-and-format:
     runs-on: ubuntu-latest
