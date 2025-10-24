@@ -1,4 +1,6 @@
 Insights:
 
+    ✔ Implementar padrão singleton para AmplitudeInitializer; @done(25-10-21 10:27)
+    ☐ Adicionar contrato com a classe AmplitudeInitializer através de interface;
     ☐ Adicionar um carrinho de comparas usando useReducer;
     ☐ Implementar um multistep form para o checkout;
