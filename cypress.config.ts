@@ -5,7 +5,7 @@ export default defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: "http://localhost:5173/",
+    baseUrl: process.env.CYPRESS_BASE_URL || "http://localhost:5173/",
     // don't reset state between tests
     testIsolation: false,
   },
