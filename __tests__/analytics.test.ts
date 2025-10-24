@@ -1,19 +1,30 @@
-import { trackEvent } from '../src/amplitude';
-import * as amplitude from '@amplitude/analytics-browser';
+import AmplitudeInitializer from '../src/services/AmplitudeInitializer';
 
-jest.mock('amplitude', () => ({
-  getInstance: jest.fn(() => ({
-    logEvent: jest.fn(),
-  })),
-}));
+// Mock do módulo AmplitudeInitializer
+jest.mock('../src/services/AmplitudeInitializer', () => {
+  return {
+    __esModule: true,
+    default: {
+      getInstance: jest.fn(() => ({
+        trackEvent: jest.fn(),
+      })),
+    },
+  };
+});
+
+// Mock do amplitude
+jest.mock('@amplitude/analytics-browser');
 
 describe('Amplitude Tracking', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('envia evento corretamente', () => {
-    const mockLog = jest.fn();
-    (amplitude.init as jest.Mock).mockReturnValue({ logEvent: mockLog });
+    const amplitudeInitializer = AmplitudeInitializer.getInstance();
 
-    trackEvent('test_event', { key: 'value' });
+    amplitudeInitializer.trackEvent('test_event', { key: 'value' });
 
-    expect(mockLog).toHaveBeenCalledWith('test_event', { key: 'value' });
+    expect(amplitudeInitializer.trackEvent).toHaveBeenCalledWith('test_event', { key: 'value' });
   });
 });
