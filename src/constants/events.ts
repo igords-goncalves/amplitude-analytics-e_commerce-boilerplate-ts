@@ -8,7 +8,7 @@ export const EVENTS = {
     },
   },
   EXPERIMENT_VIEW: {
-    name: 'experiment_view',
+    name: 'exposure',
     props: {
       EXPERIMENT_KEY: 'experiment_key',
       VARIANT: 'variant',
