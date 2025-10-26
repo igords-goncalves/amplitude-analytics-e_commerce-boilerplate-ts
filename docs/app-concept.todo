@@ -1,0 +1,75 @@
+Conceito do Site:
+    O site é um e-commerce ficticio especializado na venda de 
+    teach stacks para desenvolvimento de software. Imagine se uma
+    pessoa pudesse comprar linguagens de programação, frameworks,
+    ferramentas e bibliotecas como se fossem produtos físicos em uma loja online.
+
+Objetivo:
+    Criar um site de e-commerce onde os usuários possam navegar por diferentes
+    teach stacks, ver detalhes, adicionar itens ao carrinho e finalizar a compra.
+    Todos esses processos devem ser trackeados usando o Google Analytics 4 (GA4) e GTM, Amplitude
+    e Hotjar para análise de comportamento do usuário e otimização da experiência do usuário.
+
+    A idéia é que o site esteja pronto para criação de experimentos, testes A/B e análise de 
+    funil de conversão e gestão de funcionalidades feature flags.
+
+Observações:
+    - O site não precisa de um sistema de autenticação de usuários.
+    - Integração com ferramentas de análise para monitoramento de comportamento do usuário.
+    - Foco na experiência do usuário e na facilidade de navegação.
+
+Funcionalidades Principais:
+
+    1. Página Inicial:
+        - Header de navegação com dropdown para categorias de teach stacks e carrinho de compras.
+        - Banner promocional destacando as últimas teach stacks, de acordo com as tendências do mercado.
+        - CTA no banner para direcionar os usuários para o produto em destaque.
+        - Produtos em destaque com preços e opção de compra direta ou adicionar ao carrinho.
+        - Seção de categorias/filtro (Linguagens, Frameworks, Ferramentas, Bibliotecas).
+
+    2. Página de Produto:
+        - Detalhes completos do produto (descrição, preço, avaliações, link da documentação, etc.).
+        - Opção para selecionar quantidade e adicionar ao carrinho.
+        - Recomendações de produtos relacionados.
+
+    3. Carrinho de Compras:
+        - Lista de itens adicionados com opção de alterar quantidade ou remover itens.
+        - Cálculo automático do total do carrinho.
+        - Botão para proceder ao checkout.
+
+    4. Checkout:
+        - Formulário para informações de envio e pagamento.
+        - Resumo do pedido antes da finalização.
+        - Confirmação de pedido com número de rastreamento.
+
+    5. Rastreamento e Análise:
+        - Integração com Google Analytics 4 (GA4) e Google Tag Manager (GTM) para monitoramento de eventos.
+        - Coleta de dados de comportamento do usuário com Amplitude.
+        - Gravação de sessões e mapas de calor com Hotjar.
+
+    6. Responsividade:
+        - Design responsivo para dispositivos móveis e desktops.
+        - Testes de usabilidade em diferentes tamanhos de tela.
+        - Otimização de desempenho para carregamento rápido em todas as plataformas.
+
+    7. Segurança:
+        - Implementação de HTTPS para segurança de dados.
+        - Proteção contra ataques comuns (XSS, CSRF, etc.).
+        - Conformidade com regulamentos de privacidade (GDPR, CCPA).
+
+Adicionais:
+    Um framework deve estar acompanhado da recomendação de compra de uma linguagem de programação,
+    pois entende-se que frameworks são dependentes de linguagens.
+
+Modelo de dados:
+    Produtos: 
+        `id`: inteiro, 
+        `nome`: string, 
+        `descrição`: string, 
+        `preço`: decimal, 
+        `categoria`: string, 
+        `estoque`: inteiro, 
+        `avaliações`: array de objetos, 
+        `imagem_url`: string, 
+        `documentação_url`: string
+
