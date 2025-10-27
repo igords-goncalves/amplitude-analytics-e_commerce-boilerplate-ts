@@ -1,17 +1,23 @@
 import { useEffect, useState } from 'react';
 import { EVENTS } from '../constants/events';
 import AmplitudeInitializer from '../services/AmplitudeInitializer';
+import { Button } from '../components/_commons/Button';
 
+// Mock function to simulate feature flag variant assignment
 function getFeatureFlagVariant(flagKey: string): 'control' | 'variant' {
   const variants: Array<'control'|'variant'> = ['control', 'variant'];
   return variants[Math.floor(Math.random() * variants.length)];
 }
 
-export function ExperimentWrapper() {
+type ExperimentWrapperProps = {
+  children: React.ReactNode;
+};
+
+export function ExperimentWrapper({ children }: ExperimentWrapperProps) {
   const amplitudeInitializer = AmplitudeInitializer.getInstance();
   
   const [variant, setVariant] = useState<'control'|'variant' | null>(null);
-  // Experiment flag
+  // Experiment Flag vindo do amplitude
   const experimentKey = 'new_checkout_button';
 
   useEffect(() => {
@@ -29,9 +35,9 @@ export function ExperimentWrapper() {
   return (
     <div data-variant={variant}>
       {variant === 'variant' ? (
-        <button data-testid="checkout-btn">Comprar Agora (Novo)</button>
+        <Button data-testid="checkout-btn">Comprar Agora (Novo)</Button>
       ) : (
-        <button data-testid="checkout-btn">Comprar</button>
+        <Button data-testid="checkout-btn">Comprar</Button>
       )}
     </div>
   );
