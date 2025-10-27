@@ -5,6 +5,7 @@ export const EVENTS = {
       PRODUCT_ID: 'product_id',
       PRODUCT_NAME: 'product_name',
       PRICE: 'price',
+      CATEGORY: 'category',
     },
   },
   EXPERIMENT_VIEW: {

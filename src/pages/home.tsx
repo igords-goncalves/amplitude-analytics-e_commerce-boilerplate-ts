@@ -1,13 +1,15 @@
 import React from "react";
-import { product } from "../database/product";
-import { AddToCartButton } from "../components/AddToCartButton";
-import { ExperimentWrapper } from "../components/ExperimentWrapper";
+
+import { AddToCart } from "../feature/AddToCart";
+import { ExperimentWrapper } from "../feature/ExperimentWrapper";
+import product from "../../database/product";
+import { Product } from '../../database/product';
 
 export function HomePage() {
     return (
         <React.Fragment>
             <ExperimentWrapper />
-            <AddToCartButton product={product} />
+            <AddToCart product={product as Partial<Product>} />
         </React.Fragment>
     );
 }
