@@ -14,54 +14,58 @@ Objetivo:
     funil de conversão e gestão de funcionalidades feature flags.
 
 Observações:
-    - O site não precisa de um sistema de autenticação de usuários.
-    - Integração com ferramentas de análise para monitoramento de comportamento do usuário.
-    - Foco na experiência do usuário e na facilidade de navegação.
+    ☐ O site não precisa de um sistema de autenticação de usuários.
+    ☐ Integração com ferramentas de análise para monitoramento de comportamento do usuário.
+    ☐ Foco na experiência do usuário e na facilidade de navegação.
+    ☐ O card deve ter um botão de "Comprar Agora" que leva o usuário diretamente para a página de checkout com o item selecionado.
+    ☐ O usuário consegue ir direto para o checkout sem a necessidade de passar pelo carrinho.
+    ☐ No checkout, o usuário deve ver também os produtos do carrinho no checkout, caso tenha chegado ao checkout pela opção "Comprar Agora".
+    ☐ Se o usuário deseja excluir algum item do checkout, ele deve ser redirecionado para a página do carrinho.
 
 Funcionalidades Principais:
 
     1. Página Inicial:
-        - Header de navegação com dropdown para categorias de teach stacks e carrinho de compras.
-        - Banner promocional destacando as últimas teach stacks, de acordo com as tendências do mercado.
-        - CTA no banner para direcionar os usuários para o produto em destaque.
-        - Produtos em destaque com preços e opção de compra direta ou adicionar ao carrinho.
-        - Seção de categorias/filtro (Linguagens, Frameworks, Ferramentas, Bibliotecas).
+        ☐ Header de navegação com dropdown para categorias de teach stacks e carrinho de compras.
+        ☐ Banner promocional destacando as últimas teach stacks, de acordo com as tendências do mercado.
+        ☐ CTA no banner para direcionar os usuários para o produto em destaque.
+        ☐ Produtos em destaque com preços e opção de compra direta ou adicionar ao carrinho.
+        ☐ Seção de categorias/filtro (Linguagens, Frameworks, Ferramentas, Bibliotecas).
 
     2. Página de Produto:
-        - Detalhes completos do produto (descrição, preço, avaliações, link da documentação, etc.).
-        - Opção para selecionar quantidade e adicionar ao carrinho.
-        - Recomendações de produtos relacionados.
+        ☐ Detalhes completos do produto (descrição, preço, avaliações, link da documentação, etc.).
+        ☐ Opção para selecionar quantidade e adicionar ao carrinho.
+        ☐ Recomendações de produtos relacionados.
 
     3. Carrinho de Compras:
-        - Lista de itens adicionados com opção de alterar quantidade ou remover itens.
-        - Cálculo automático do total do carrinho.
-        - Botão para proceder ao checkout.
+        ☐ Lista de itens adicionados com opção de alterar quantidade ou remover itens.
+        ☐ Cálculo automático do total do carrinho.
+        ☐ Botão para proceder ao checkout.
 
     4. Checkout:
-        - Formulário para informações de envio e pagamento.
-        - Resumo do pedido antes da finalização.
-        - Confirmação de pedido com número de rastreamento.
+        ☐ Formulário para informações de envio e pagamento.
+        ☐ Resumo do pedido antes da finalização.
+        ☐ Confirmação de pedido com número de rastreamento.
 
     5. Rastreamento e Análise:
-        - Integração com Google Analytics 4 (GA4) e Google Tag Manager (GTM) para monitoramento de eventos.
-        - Coleta de dados de comportamento do usuário com Amplitude.
-        - Gravação de sessões e mapas de calor com Hotjar.
+        ☐ Integração com Google Analytics 4 (GA4) e Google Tag Manager (GTM) para monitoramento de eventos.
+        ☐ Coleta de dados de comportamento do usuário com Amplitude.
+        ☐ Gravação de sessões e mapas de calor com Hotjar.
 
     6. Responsividade:
-        - Design responsivo para dispositivos móveis e desktops.
-        - Testes de usabilidade em diferentes tamanhos de tela.
-        - Otimização de desempenho para carregamento rápido em todas as plataformas.
+        ☐ Design responsivo para dispositivos móveis e desktops.
+        ☐ Testes de usabilidade em diferentes tamanhos de tela.
+        ☐ Otimização de desempenho para carregamento rápido em todas as plataformas.
 
     7. Segurança:
-        - Implementação de HTTPS para segurança de dados.
-        - Proteção contra ataques comuns (XSS, CSRF, etc.).
-        - Conformidade com regulamentos de privacidade (GDPR, CCPA).
+        ☐ Implementação de HTTPS para segurança de dados.
+        ☐ Proteção contra ataques comuns (XSS, CSRF, etc.).
+        ☐ Conformidade com regulamentos de privacidade (GDPR, CCPA).
 
 Adicionais:
     Um framework deve estar acompanhado da recomendação de compra de uma linguagem de programação,
     pois entende-se que frameworks são dependentes de linguagens.
 
-Modelo de dados:
+Modelo de dados mockup:
     Produtos: 
         `id`: inteiro, 
         `nome`: string, 

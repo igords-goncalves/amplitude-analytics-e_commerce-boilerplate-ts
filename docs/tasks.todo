@@ -1,0 +1,53 @@
+#FASE 1:
+    ☐ Revisar app-feature p/ adicionar novos casos de uso e cenários de teste; @low
+    ☐ Refatorar componentes comuns, ex. `Button` e `Input` para melhorar a reutilização; @high @today
+
+    ☐ Mover componentes de negócios ex.`AddToCartButton` para pasta @file///src/feature;
+        ☐ Tornar componentes de negócios mais genéricos p/ reutilização futura;
+
+    ☐ Criar UI componentes ex. `ProductCard`;
+
+    ✔ Criar dados mock p/ produtos; @critical @done(25-10-27 08:29)
+    
+    Criação de páginas:
+        ☐ Página Inicial (HomePage);
+        ☐ Página de Produto (ProductPage);
+        ☐ Página de Carrinho (CartPage);
+        ☐ Página de Checkout (CheckoutPage);
+        
+        Testes (E2E / Integração):
+            Os testes devem cobrir os seguintes cenários em
+            @file:///C:\Users\igord\Code\amplitude-analytics-e_commerce-boilerplate-ts\app.feature
+            
+            ☐ Testar renderização correta de cada página;
+            ☐ Teste de navegação entre páginas;
+            ☐ Teste de adição e remoção de itens no carrinho;
+            ☐ Teste de finalização de compra no checkout;
+            ☐ Testar interações entre componentes (ex: atualização do carrinho ao adicionar/remover itens);
+
+    Criação de componentes:
+        ☐ Componente de Header (HeaderComponent);
+        ☐ Componente de Produto (ProductComponent);
+        ☐ Componente de Carrinho (CartComponent);
+        ☐ Componente de Formulário de Checkout (CheckoutFormComponent);
+        
+        Testes (Unitários):
+            ☐ Testar renderização correta de cada componente;
+            ☐ Testar funcionalidade de cada componente (ex: adicionar ao carrinho, remover item, etc.);
+            ☐ Teste de validação de formulário no checkout;
+            ☐ Testes unitários de componentes de negócio (ex: AddToCartButton);
+            ☐ Testes unitários de componentes comuns (ex: Button, Input);
+
+#FASE 2:
+    ☐ Implementar integração com Google Analytics 4 (GA4) e Google Tag Manager (GTM);
+    ☐ Implementar integração com Amplitude para análise de comportamento do usuário;
+    ☐ Implementar integração com Hotjar para gravação de sessões e mapas de calor;
+    
+    Testes:
+        Os testes devem cobrir os seguintes cenários em
+        @file:///C:\Users\igord\Code\amplitude-analytics-e_commerce-boilerplate-ts\tracking.feature
+            
+            ☐ Testar se os eventos de navegação são rastreados corretamente;
+            ☐ Testar se os eventos de adição e remoção de itens no carrinho são rastreados corretamente;
+            ☐ Testar se os eventos de finalização de compra no checkout são rastreados corretamente;
+            ☐ Testar se os dados coletados estão sendo enviados corretamente para GA4, Amplitude e Hotjar.
