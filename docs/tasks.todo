@@ -2,9 +2,14 @@
 # tasks.todo (organizado)
 # Atualizado: 2025-11-08
 # Estrutura 
-    1) Estado atual do projeto  
-    2) Tarefas priorizadas e alinhadas ao app-concept
+    1) Estado atual do projeto
+    2) Tarefas priorizadas e alinhadas ao app-concept.md
+    3) Tarefas adicionais e melhorias
 # --------------------------------------------------
+
+Estado atual do projeto:
+    O projeto está na fase de prototipação e design do layout, com wireframes e prompts de design já criados. 
+    A configuração inicial do projeto foi realizada, incluindo a adição do Tailwind CSS e a criação de dados mock para produtos.
 
 #FASE 1:
     Prototipação e design do layout:
