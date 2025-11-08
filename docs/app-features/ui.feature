@@ -1,60 +1,60 @@
-Feature: User interface for e-commerce application
+Feature: Interface de usuário para aplicação de e-commerce
 
     @unit @ui @hero-banner
-    Scenario: Hero banner UI (unit)
-        Given the hero banner component is displayed
-        When the page loads
-        Then the hero banner should be visible
-        And the banner should display the correct headline text
-        And the banner should have a call to action button with the test id "hero-cta"
+    Scenario: Banner hero da UI (unit)
+        Given o componente hero banner está exibido
+        When a página carrega
+        Then o hero banner deve estar visível
+        And o banner deve exibir o texto de headline correto
+        And o banner deve ter um botão de call to action com o test id "hero-cta"
 
     @unit @ui @product-list
-    Scenario: Product list UI (unit)
-        Given a list of products is available
-        When the page loads
-        Then the product list should be visible
-        And each product item should display the product name, image, and price
-        And each product item should have the test id "product-item"
+    Scenario: Lista de produtos na UI (unit)
+        Given uma lista de produtos está disponível
+        When a página carrega
+        Then a lista de produtos deve estar visível
+        And cada item de produto deve exibir o nome do produto, imagem e preço
+        And cada item de produto deve ter o test id "product-item"
 
     @unit @ui @product-card
-    Scenario: Product card UI (unit)
-        Given a specific product is available
-        When the product card component renders
-        Then the product card should be visible
-        And the card should display the product name, image, and price
-        And the card should have the test id "product-card"
-        And the card should have an "Adicionar ao Carrinho" button with the test id "add-to-cart-btn"
-        And the card should have a "Ver Detalhes" link with the test id "view-details-link"
-        And the card should have a "Comprar" button with the test id "buy-now-btn"
+    Scenario: Cartão de produto na UI (unit)
+        Given um produto específico está disponível
+        When o componente do product card é renderizado
+        Then o product card deve estar visível
+        And o cartão deve exibir o nome do produto, imagem e preço
+        And o cartão deve ter o test id "product-card"
+        And o cartão deve ter um botão "Adicionar ao Carrinho" com o test id "add-to-cart-btn"
+        And o cartão deve ter um link "Ver Detalhes" com o test id "view-details-link"
+        And o cartão deve ter um botão "Comprar" com o test id "buy-now-btn"
 
     @unit @ui @product-details
-    Scenario: Product details UI (unit)
-        Given a specific product is selected
-        When the product details page loads
-        Then the product details section should be visible
-        And the section should display the product name, image, description, and price
-        And the section should have the test id "product-details"
+    Scenario: Detalhes do produto na UI (unit)
+        Given um produto específico está selecionado
+        When a página de detalhes do produto carrega
+        Then a seção de detalhes do produto deve estar visível
+        And a seção deve exibir o nome do produto, imagem, descrição e preço
+        And a seção deve ter o test id "product-details"
 
     @unit @ui @add-to-cart
-    Scenario: Add to cart button UI (unit)
-        Given a product is available
-        When the page loads
-        Then the add to cart button should be visible
-        And the button should display "Adicionar ao carrinho" text
-        And the button should have the test id "add-to-cart"
+    Scenario: Botão de add to cart na UI (unit)
+        Given um produto está disponível
+        When a página carrega
+        Then o botão add to cart deve estar visível
+        And o botão deve exibir o texto "Adicionar ao carrinho"
+        And o botão deve ter o test id "add-to-cart"
 
     @unit @ui @experiment-variant-control
-    Scenario: Control variant UI (unit)
-        Given the user is assigned to the "control" variant
-        When the ExperimentWrapper component renders
-        Then the checkout button should display "Comprar" text
-        And the button should have the test id "checkout-btn"
-        And the component should have the data attribute "data-variant" set to "control"
+    Scenario: UI da variant de controle (unit)
+        Given o usuário está atribuído à variant "control"
+        When o componente ExperimentWrapper é renderizado
+        Then o botão de checkout deve exibir o texto "Comprar"
+        And o botão deve ter o test id "checkout-btn"
+        And o componente deve ter o atributo de dados "data-variant" definido como "control"
 
     @unit @ui @experiment-variant-test
-    Scenario: Variant UI (unit)
-        Given the user is assigned to the "variant" variant
-        When the ExperimentWrapper component renders
-        Then the checkout button should display "Comprar Agora (Novo)" text
-        And the button should have the test id "checkout-btn"
-        And the component should have the data attribute "data-variant" set to "variant"    
+    Scenario: UI da variant de teste (unit)
+        Given o usuário está atribuído à variant "variant"
+        When o componente ExperimentWrapper é renderizado
+        Then o botão de checkout deve exibir o texto "Comprar Agora (Novo)"
+        And o botão deve ter o test id "checkout-btn"
+        And o componente deve ter o atributo de dados "data-variant" definido como "variant"
