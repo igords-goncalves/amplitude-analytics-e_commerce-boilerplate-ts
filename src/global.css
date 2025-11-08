@@ -1,19 +1,77 @@
-@import url('./assets/css/button.css');
+/*
+As classes utilitárias do Tailwind CSS ficam disponíveis aqui a partir de agora
+não é mais o arquivo de configuração do Tailwind CSS, essa abordagem é
+chamada de css-first. Podemos usar as classes utilitárias do Tailwind CSS
+*/
+ @import "tailwindcss";
 
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #222;
-    color: #FFF;
+/*
+    Layout principal do app usando CSS Grid.
+
+    Uso:
+    - Envolva os templates com um contêiner que tenha a classe `site-layout`.
+    - Os filhos podem ser elementos semânticos ou possuir as classes abaixo
+        para garantir o posicionamento automático no Grid:
+            nav  (ou .site-nav)    -> área "nav"
+            .site-hero             -> área "hero"
+            main (ou .site-main)   -> área "main"
+            footer (ou .site-footer)-> área "footer"    
+*/
+
+:root{
+    --bg: #191919;
+    --panel: #1f1f1f;
+    --fg: #ffffff;
+    --muted: #bdbdbd;
+    --border: #444444;
+    --gap: 1.25rem
 }
 
-body div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+.site-layout {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "hero"
+        "main"
+        "footer";
+    gap: var(--gap);
+    align-items: start;
+    justify-items: center;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+/* Área: HEADER */
+header,
+.site-header {
+    grid-area: header;
+    width: 100%;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Área: HERO (apresentação) */
+.site-hero,
+.hero,
+section.site-hero {
+    grid-area: hero;
+    width: 100%;
+}
+
+/* Área: MAIN (conteúdo principal) */
+main,
+.site-main {
+    grid-area: main;
+    width: 100%;
+}
+
+/* Área: FOOTER */
+footer,
+.site-footer {
+    grid-area: footer;
+    width: 100%;
 }
