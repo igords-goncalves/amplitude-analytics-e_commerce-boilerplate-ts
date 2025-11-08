@@ -1,15 +1,30 @@
 import React from "react";
-
-import { AddToCart } from "../feature/AddToCart";
-import { ExperimentWrapper } from "../feature/ExperimentWrapper";
-import product from "../../database/product";
-import { Product } from '../../database/product';
+import { Footer, Header, Hero, Main } from "../components/template";
+import { NavigationMenu } from "../components/NavigationMenu";
+import { BannerPromo } from "../components/BannerPromo";
+import { CategoriesSwipper } from "../components/CategoriesSwipper";
+import { Site } from "../components/layout/Site";
+import { ProductsGrid } from "../components/ProductsGrid";
+import { FooterContent } from "../components/FooterContent";
 
 export function HomePage() {
     return (
         <React.Fragment>
-            <ExperimentWrapper />
-            <AddToCart product={product as Partial<Product>} />
+            <Site>
+                <Header>
+                    <NavigationMenu />
+                </Header>
+                <Hero>
+                    <BannerPromo />
+                </Hero>
+                <Main>
+                    <CategoriesSwipper />
+                    <ProductsGrid />
+                </Main>
+                <Footer>
+                    <FooterContent />
+                </Footer>
+            </Site>
         </React.Fragment>
     );
 }
