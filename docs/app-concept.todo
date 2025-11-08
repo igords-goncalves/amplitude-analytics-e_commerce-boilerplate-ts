@@ -2,39 +2,49 @@ Conceito do Site:
     O site é um e-commerce ficticio especializado na venda de 
     teach stacks para desenvolvimento de software. Imagine se uma
     pessoa pudesse comprar linguagens de programação, frameworks,
-    ferramentas e bibliotecas como se fossem produtos físicos em uma loja online.
+    ferramentas e bibliotecas como se fossem produtos físicos em uma loja online
+    sem precisar de cadastro para realizar a compra.
 
 Objetivo:
     Criar um site de e-commerce onde os usuários possam navegar por diferentes
-    teach stacks, ver detalhes, adicionar itens ao carrinho e finalizar a compra.
-    Todos esses processos devem ser trackeados usando o Google Analytics 4 (GA4) e GTM, Amplitude
-    e Hotjar para análise de comportamento do usuário e otimização da experiência do usuário.
+    teach stacks, ver detalhes desses produtos, adicionar itens ao carrinho, remover itens do carrinho 
+    e finalizar a compra através de checkout de 3 etapas. 
+    Todos esses processos devem ser trackeados usando o Google Analytics 4 (GA4)e GTM,Amplitude 
+    e Hotjar para análise de comportamento do usuário e otimização da experiência do usuário,
+    retenção, engajamento, conversão e escalabilidade do produto.
 
     A idéia é que o site esteja pronto para criação de experimentos, testes A/B e análise de 
-    funil de conversão e gestão de funcionalidades feature flags.
+    funil de conversão e gestão de funcionalidades com feature flags.
 
-Observações:
+Critérios de Aceitação:
     ☐ O site não precisa de um sistema de autenticação de usuários.
-    ☐ Integração com ferramentas de análise para monitoramento de comportamento do usuário.
+    ☐ Deve ter integração com ferramentas de análise para monitoramento de comportamento do usuário.
     ☐ Foco na experiência do usuário e na facilidade de navegação.
-    ☐ O card deve ter um botão de "Comprar Agora" que leva o usuário diretamente para a página de checkout com o item selecionado.
-    ☐ O usuário consegue ir direto para o checkout sem a necessidade de passar pelo carrinho.
+    ☐ O carrinho deve ser acessível a partir de qualquer página do site, posicionado no header de navegação.
+    ☐ O carrinho deve permitir a remoção de itens e atualização de quantidades.
+    ☐ O checkout deve ser dividido em 3 etapas: informações da compra, informações de envio e pagamento, confirmação do pedido bem sucedido
     ☐ No checkout, o usuário deve ver também os produtos do carrinho no checkout, caso tenha chegado ao checkout pela opção "Comprar Agora".
+    ☐ O usuário consegue ir direto para o checkout sem a necessidade de passar pelo carrinho.
     ☐ Se o usuário deseja excluir algum item do checkout, ele deve ser redirecionado para a página do carrinho.
+    ☐ O card do produto deve ter um botão de "Comprar Agora" que leva o usuário diretamente para a página de checkout com o item selecionado.
+    ☐ O card deve ter também um botão de "Adicionar ao Carrinho" que adiciona o item ao carrinho sem sair da página atual.
+    ☐ Através de um campo de busca, o usuário deve conseguir encontrar produtos avulsos ou por categorias.
+    ☐ Na tela de detalhes do produto, o usuário deve ver informações completas sobre o produto, incluindo descrição, preço, avaliações e link para documentação oficial.
+    ☐ Deve ser possível comprar o produto em diferentes quantidades.
+    ☐ Deve ser possível comprar o produto individualmente na tela de detalhes do produto.
 
 Funcionalidades Principais:
 
     1. Página Inicial:
-        ☐ Header de navegação com dropdown para categorias de teach stacks e carrinho de compras.
-        ☐ Banner promocional destacando as últimas teach stacks, de acordo com as tendências do mercado.
-        ☐ CTA no banner para direcionar os usuários para o produto em destaque.
+        ☐ Header de navegação com dropdown para categorias de teach stacks, campo de pesquisa e carrinho de compras.
+        ☐ Banner promocional destacando um produto, de acordo com as tendências do mercado com copy persuasiva e botão de "Comprar Agora".
+        ☐ Seção de categorias/filtro deve ser uma secção com cards(Linguagens, Frameworks, Ferramentas, Bibliotecas).
         ☐ Produtos em destaque com preços e opção de compra direta ou adicionar ao carrinho.
-        ☐ Seção de categorias/filtro (Linguagens, Frameworks, Ferramentas, Bibliotecas).
 
     2. Página de Produto:
         ☐ Detalhes completos do produto (descrição, preço, avaliações, link da documentação, etc.).
-        ☐ Opção para selecionar quantidade e adicionar ao carrinho.
-        ☐ Recomendações de produtos relacionados.
+        ☐ Opção para selecionar quantidade e adicionar ao carrinho ou comprar agora.
+        ☐ Recomendações de produtos relacionados ao produto da página.
 
     3. Carrinho de Compras:
         ☐ Lista de itens adicionados com opção de alterar quantidade ou remover itens.
@@ -42,9 +52,9 @@ Funcionalidades Principais:
         ☐ Botão para proceder ao checkout.
 
     4. Checkout:
-        ☐ Formulário para informações de envio e pagamento.
-        ☐ Resumo do pedido antes da finalização.
-        ☐ Confirmação de pedido com número de rastreamento.
+        ☐ Formulário para informações da compra.
+        ☐ Informações de envio e pagamento.
+        ☐ Informação de compra bem-sucedida.
 
     5. Rastreamento e Análise:
         ☐ Integração com Google Analytics 4 (GA4) e Google Tag Manager (GTM) para monitoramento de eventos.
