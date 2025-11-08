@@ -10,6 +10,7 @@ dist/
 build/
 *.tgz
 *.tar.gz
+.stylelintcache
 
 # Environment variables
 .env
