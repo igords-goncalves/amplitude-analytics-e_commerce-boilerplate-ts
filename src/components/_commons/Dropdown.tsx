@@ -74,7 +74,7 @@ export function Dropdown({
                     aria-hidden={!open}
                     aria-labelledby={id}
                     tabIndex={-1}
-                    className={`absolute z-50 mt-1 min-w-32 ${menuAlignClass} bg-[#232323] text-gray-400 rounded-md shadow-lg p-2 text-[12px]`}
+                    className={`absolute z-50 mt-1 w-40 min-w-32 ${menuAlignClass} bg-[#232323] rounded-md shadow-lg p-2 text-[12px]`}
                 >
                     {children}
                 </div>

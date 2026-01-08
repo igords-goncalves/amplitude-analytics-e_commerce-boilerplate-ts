@@ -70,7 +70,7 @@ export function useDropdown({
         };
     }, [open, onToggle, closeOnBlur]);
 
-    function toggle(element?: React.MouseEvent) {
+    function toggle() {
         if (isDisabled) return;
 
         const next = !open;
