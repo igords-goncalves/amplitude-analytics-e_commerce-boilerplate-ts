@@ -24,11 +24,11 @@ export function AddToCartButton({
     return (
         <Button
             onClick={handleClick}
-            className="font-semibold text-white bg-blue-500 rounded-full"
+            className="font-semibold text-white bg-teal-800 rounded-full p-2"
             data-testid="data-testid"
             {...props}
         >
-            <ShoppingCart />
+            <ShoppingCart size={16}/>
         </Button>
     );
 }

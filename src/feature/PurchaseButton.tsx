@@ -1,9 +1,12 @@
 import { Button } from "../components/_commons/Button";
 
-export function PurchaseButton() {    
+export function PurchaseButton() {
     return (
-        <Button onClick={() => alert("Purchase completed!")}>
-            Complete Purchase
+        <Button
+            className="px-4 text-[12px] w-full font-medium rounded-lg bg-black"
+            data-testid="checkout-btn"
+        >
+            Comprar
         </Button>
-    )
+    );
 }
