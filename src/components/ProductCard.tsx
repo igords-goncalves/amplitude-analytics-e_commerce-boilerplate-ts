@@ -1,17 +1,29 @@
 import { Product } from "../../database/product";
 import { AddToCartButton } from "../feature/AddToCartButton";
-import { ExperimentWrapper } from "../feature/ExperimentWrapper";
+import { PurchaseButton } from "../feature/PurchaseButton";
+import { Image } from "./_commons";
 
 export function ProductCard({ product }: { product: Product }) {
     return (
-        <div className="flex flex-col justify-between gap-4 p-4 border rounded-lg">
-            <div>
-                <h2 className="font-bold">{product.nome}</h2>
-                <p>{product.descricao}</p>
-                <span className="text-lg font-semibold">R${product.preco}</span>
+        <div className="flex flex-col justify-between gap-4 p-4  bg-[#232323] rounded-lg">
+            <Image
+                src={product.imagem_url}
+                alt={product.nome}
+                className="mx-auto"
+            />
+            <div className="flex flex-col gap-2">
+                <a href="#">
+                    <h2 className="font-bold hover:underline hover:text-blue-500">{product.nome}</h2>
+                </a>
+                <p className="font-normal text-sm text-neutral-400">
+                    {product.descricao}
+                </p>
+                <span className="text-lg font-semibold text-neutral-200">
+                    R${product.preco}
+                </span>
             </div>
-            <div className="flex items-center justify-between">
-                <ExperimentWrapper />
+            <div className="flex items-center gap-4 justify-between">
+                <PurchaseButton />
                 <AddToCartButton product={product} />
             </div>
         </div>
