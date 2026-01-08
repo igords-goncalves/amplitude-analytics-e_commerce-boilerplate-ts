@@ -26,7 +26,11 @@ export const products: Product[] = [
 		estoque: 150,
 		avaliacoes: [
 			{ usuario: 'Alice', nota: 5, comentario: 'Essencial para todo desenvolvedor web.' },
-			{ usuario: 'Bruno', nota: 4, comentario: 'Versátil, mas algumas inconsistências sintáticas.' }
+			{ usuario: 'Bruno', nota: 4, comentario: 'Versátil, mas algumas inconsistências sintáticas.' },
+			{ usuario: 'Bruno', nota: 2, comentario: 'Versátil, mas algumas inconsistências sintáticas.' },
+			{ usuario: 'Bruno', nota: 1, comentario: 'Versátil, mas algumas inconsistências sintáticas.' },
+			{ usuario: 'Bruno', nota: 1, comentario: 'Versátil, mas algumas inconsistências sintáticas.' },
+			{ usuario: 'Bruno', nota: 1, comentario: 'Versátil, mas algumas inconsistências sintáticas.' },
 		],
 		imagem_url: '/assets/images/JavaScript.png',
 		documentacao_url: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
