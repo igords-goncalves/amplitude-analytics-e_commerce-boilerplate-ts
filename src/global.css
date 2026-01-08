@@ -4,6 +4,7 @@ não é mais o arquivo de configuração do Tailwind CSS, essa abordagem é
 chamada de css-first. Podemos usar as classes utilitárias do Tailwind CSS
 */
  @import "tailwindcss";
+ @plugin "@tailwindcss/typography";
 
 /*
     Layout principal do app usando CSS Grid.
@@ -60,6 +61,7 @@ header,
 section.site-hero {
     grid-area: hero;
     width: 100%;
+    margin-top: calc(var(--gap) * 2); ;
 }
 
 /* Área: MAIN (conteúdo principal) */

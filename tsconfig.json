@@ -9,11 +9,11 @@
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,
-        "moduleResolution": "node",
+        "moduleResolution": "bundler",
         "noEmit": true,
         "jsx": "react-jsx",
         "types": ["jest", "node"]
     },
-    "include": ["src", "database"],
+    "include": ["src", "database", "src/**/*.mdx", "*.d.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }
