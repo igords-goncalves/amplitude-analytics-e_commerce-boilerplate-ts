@@ -1,0 +1,64 @@
+import DocsLayout from '../../components/layout/DocsLayout';
+
+export default function DocsIndex({ children }) {
+  return <DocsLayout>{children}</DocsLayout>;
+}
+
+# Documentação Amplitude Boilerplate
+
+Bem-vindo à documentação completa do projeto **Amplitude Boilerplate**! 
+
+Este é um centro centralizado de conhecimento que substitui ferramentas externas como Trello, Jira e Notion, mantendo tudo versionado junto com o código.
+
+___
+
+## O que você encontra aqui:
+
+## Conceito do App
+- [Visão Geral do App](/docs/app-concept) - Arquitetura, decisões técnicas e visão do produto
+
+## Analytics
+- [Plano de Analytics](/docs/analytics/analytics-plan) - Estratégia de tracking e métricas
+- [Eventos](/docs/analytics/events) - Catálogo completo de eventos implementados
+- [Plano de Experimentos](/docs/analytics/experiment-plan) - A/B tests e feature flags
+
+## Features
+- [Visão Geral](/docs/app-features) - Overview de todas as features
+- [Acessibilidade](/docs/app-features/accessibility)
+- [Analytics](/docs/app-features/analytics)
+- [Experimentos](/docs/app-features/experiments)
+- [Performance](/docs/app-features/performance)
+
+### Pesquisa e Descoberta
+- [Framework de Hipóteses](/docs/analytics/problems/framework)
+- [Inventário de Problemas](/docs/analytics/problems/inventario)
+- [Personas](/docs/analytics/problems/personas)
+
+## Por que MDX?
+
+Esta documentação usa **MDX**, que combina Markdown com React. Isso significa que você pode:
+
+- ✅ Escrever documentação em Markdown simples
+- ✅ Importar e usar componentes React reais do projeto
+- ✅ Criar exemplos interativos
+- ✅ Manter código e documentação sincronizados
+
+## Como usar
+
+1. **Navegue** pela sidebar à esquerda
+2. **Edite** arquivos `.mdx` diretamente no código
+3. **Veja** mudanças instantaneamente no modo dev
+4. **Commit** documentação junto com código
+
+## Contribuindo
+
+Ao adicionar novas features ou mudanças:
+
+1. Atualize a documentação relevante
+2. Adicione novos eventos em `/docs/analytics/events`
+3. Documente decisões técnicas em `/docs/app-concept`
+4. Registre problemas e hipóteses em `/docs/analytics/problems/`
+
+---
+
+**Última atualização:** {new Date().toLocaleDateString('pt-BR')}

@@ -39,6 +39,7 @@ Estado atual do projeto:
         2) Implementação de navegação e rotas:
             ☐ Adicionar/configurar React Router: rotas /, /product/:id, /cart, /checkout
             ☐ Garantir funcionamento de links 'Comprar Agora' e histórico de navegação
+            ☐ Criar um sistema de rotas p/ documentoção com mdx
 
         3) Componentes críticos e comportamentais:
             ☐ Header/Nav com cart acessível em todas as páginas (dropdown/mini-cart opcional)

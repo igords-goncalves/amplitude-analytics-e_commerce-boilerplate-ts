@@ -1,0 +1,34 @@
+import DocsLayout from "../../../components/layout/DocsLayout";
+
+export default function DocsEvents({children}) {
+  return <DocsLayout>{children}</DocsLayout>;
+}
+
+# Eventos
+
+## Catálogo canônico de eventos — AMPLITUDE ANALYTICS E-COMMERCE BOILERPLATE TS (Design de Taxonomia de Dados)
+
+Este arquivo é a fonte de verdade para eventos de analytics usados pela aplicação. Use-o para validar instrumentação, mocks de teste e integrações (Amplitude / GA4 via GTM). Esse documento segue o fluxo de criação de dados abordando a etapa de Design de Taxonomia de Dados.
+
+Formato recomendado:
+- nome do evento: descrição curta seguindo o formato: 
+    - `Pascal Case` (ex: `Button Generate Clicked`) com substantivo e verbo no pretérito.
+- descrição: breve explicação do evento
+- propriedades: lista de propriedades com tipos e exemplos seguindo o formato:
+  - `property_name` type (descrição)
+
+Observações de contrato mínimo (boilerplate):
+
+- `timestamp` (string ISO-8601)
+- `env` ("development" | "staging" | "production") — usar `ENVIRONMENT`
+- `app_version` (semver)
+
+Essas são propriedades obrigatórias para todos os eventos.
+
+Padrões operacionais:
+- Ao emitir eventos que também devem ser consumidos pelo GTM, faça um push para `window.dataLayer` com `{ event: string, payload: object }`.
+- Não incluir PII sem consentimento explícito. Se o usuário negar tracking, não inicializar provedores que enviam dados (Amplitude/GA4) ou filtrar eventos.
+
+---
+
+### Eventos: Sign Generated
