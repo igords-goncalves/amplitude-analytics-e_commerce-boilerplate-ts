@@ -28,7 +28,7 @@ export const products: Product[] = [
 			{ usuario: 'Alice', nota: 5, comentario: 'Essencial para todo desenvolvedor web.' },
 			{ usuario: 'Bruno', nota: 4, comentario: 'Versátil, mas algumas inconsistências sintáticas.' }
 		],
-		imagem_url: '/assets/images/javascript.png',
+		imagem_url: '/assets/images/JavaScript.png',
 		documentacao_url: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript'
 	},
 	{
@@ -41,7 +41,7 @@ export const products: Product[] = [
 		avaliacoes: [
 			{ usuario: 'Carla', nota: 5, comentario: 'A tipagem salvou meu projeto várias vezes.' }
 		],
-		imagem_url: '/assets/images/typescript.png',
+		imagem_url: '/assets/images/TypeScript.png',
 		documentacao_url: 'https://www.typescriptlang.org/docs/'
 	},
 	{
@@ -55,7 +55,7 @@ export const products: Product[] = [
 			{ usuario: 'Diego', nota: 5, comentario: 'Componentes e ecossistema excelentes.' },
 			{ usuario: 'Eva', nota: 4, comentario: 'Curva de aprendizado moderada.' }
 		],
-		imagem_url: '/assets/images/react.png',
+		imagem_url: '/assets/images/React.png',
 		documentacao_url: 'https://reactjs.org/docs/getting-started.html'
 	},
 	{
@@ -68,7 +68,7 @@ export const products: Product[] = [
 		avaliacoes: [
 			{ usuario: 'Fernando', nota: 5, comentario: 'Produtividade incrível para fullstack React.' }
 		],
-		imagem_url: '/assets/images/nextjs.png',
+		imagem_url: '/assets/images/Next.js.png',
 		documentacao_url: 'https://nextjs.org/docs'
 	},
 	{
@@ -81,7 +81,7 @@ export const products: Product[] = [
 		avaliacoes: [
 			{ usuario: 'Guilherme', nota: 4, comentario: 'Excelente para I/O intensivo.' }
 		],
-		imagem_url: '/assets/images/nodejs.png',
+		imagem_url: '/assets/images/Node.js.png',
 		documentacao_url: 'https://nodejs.org/pt-br/docs/'
 	},
 	{
@@ -94,7 +94,7 @@ export const products: Product[] = [
 		avaliacoes: [
 			{ usuario: 'Helena', nota: 5, comentario: 'Acelera muito o desenvolvimento de UI.' }
 		],
-		imagem_url: '/assets/images/tailwind.png',
+		imagem_url: '/assets/images/TailwindCSS.png',
 		documentacao_url: 'https://tailwindcss.com/docs'
 	},
 	{
@@ -107,7 +107,7 @@ export const products: Product[] = [
 		avaliacoes: [
 			{ usuario: 'Igor', nota: 4, comentario: 'Fundamental para ambientes consistentes.' }
 		],
-		imagem_url: '/assets/images/docker.png',
+		imagem_url: '/assets/images/Docker.png',
 		documentacao_url: 'https://docs.docker.com/'
 	},
 	{
@@ -120,7 +120,7 @@ export const products: Product[] = [
 		avaliacoes: [
 			{ usuario: 'Julia', nota: 5, comentario: 'Testes fáceis de escrever e rápidos.' }
 		],
-		imagem_url: '/assets/images/jest.png',
+		imagem_url: '/assets/images/Jest.png',
 		documentacao_url: 'https://jestjs.io/pt-BR/docs/getting-started'
 	}
 ];
