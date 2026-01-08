@@ -16,15 +16,15 @@ Estado atual do projeto:
         ✔ Criar wireframes para cada página e componente; @done(25-11-08 14:11)
         ✔ Utilizar chatGPT para gerar prompts de design; @done(25-11-08 14:11)
         ✔ Criar protótipo das páginas e componentes com o Google Stitch; @done(25-11-08 14:11)
-        ☐ Utilizar código gerado pelo Google Stitch como base para o desenvolvimento;
+        ✘ Utilizar código gerado pelo Google Stitch como base para o desenvolvimento; @cancelled(26-01-08 09:40)
 
     Configuração do projeto:
         ✔ Adicionar Tailwind CSS ao projeto p/ estilização rápida e responsiva; @done(25-10-29 22:45)
         ✔ Criar dados mock p/ produtos; @critical @done(25-10-27 08:29)
-        ☐ Implementar navegação entre páginas usando React Router Dom;
+        ✔ Implementar navegação entre páginas usando React Router Dom; @done(26-01-08 09:39)
 
     Criação de páginas:
-        ☐ Página Inicial (HomePage);
+        ✔ Página Inicial (HomePage); @done(26-01-08 09:39)
         ☐ Página de Produto (ProductPage);
         ☐ Página do Carrinho (CartPage);
         ☐ Página de Checkout (CheckoutPage);
