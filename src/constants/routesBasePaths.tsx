@@ -7,6 +7,8 @@ import AppConcept from "../pages/docs/app-concept.mdx";
 import DocsIndex from "../pages/docs/index.mdx";
 import DocsEvents from "../pages/docs/analytics/events.mdx";
 import DocsFeatures from "../pages/docs/features/index.mdx";
+import { ProtectedRoute } from "../components/ProtectedRoute";
+
 
 export const routesBasePaths = [
     {
@@ -27,18 +29,18 @@ export const routesBasePaths = [
     },
     {
         path: "/docs",
-        jsxElement: <DocsIndex />,
+        jsxElement: <ProtectedRoute><DocsIndex /></ProtectedRoute>,
     },
     {
         path: "/docs/app-concept",
-        jsxElement: <AppConcept />,
+        jsxElement: <ProtectedRoute><AppConcept /></ProtectedRoute>,
     },
     {
         path: "/docs/analytics/events",
-        jsxElement: <DocsEvents />,
+        jsxElement: <ProtectedRoute><DocsEvents /></ProtectedRoute>,
     },
     {
         path: "/docs/features",
-        jsxElement: <DocsFeatures />,
+        jsxElement: <ProtectedRoute><DocsFeatures /></ProtectedRoute>,
     },
 ];
