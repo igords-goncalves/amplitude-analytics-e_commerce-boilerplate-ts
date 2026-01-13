@@ -6,13 +6,13 @@ export function FlagEnv() {
     const appVersion = process.env.APP_VERSION;
     const reactVersion = React.version;
     const host = typeof window !== 'undefined' ? window.location.host : 'N/A';
-    const environment = process.env.ENVIRONMENT || 'development';
+    const environment = process.env.ENVIRONMENT;
 
     return (
         <div className="fixed top-25 right-2 z-50">
             <Dropdown
                 label={<Info size={16} />}
-                buttonClassName="bg-red-600 hover:bg-red-700 text-white rounded-full p-2 shadow-lg"
+                buttonClassName={`${environment === "development" ? "bg-red-600 hover:bg-red-700" : "bg-green-600 hover:bg-green-700"} text-white rounded-full p-2 shadow-lg`}
                 className="w-auto"
                 align="right"
             >
@@ -25,7 +25,7 @@ export function FlagEnv() {
                         <div className="flex justify-between gap-4">
                             <span className="text-gray-400">Env:</span>
                             <span className={`font-semibold ${environment === 'development' ? 'text-yellow-400' : 'text-green-400'}`}>
-                                {environment.toUpperCase()}
+                                {environment!.toUpperCase()}
                             </span>
                         </div>
                         
