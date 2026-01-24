@@ -1,23 +1,31 @@
-import { useMemo } from "react";
 import { useSearchParams } from "react-router";
-import products, { Product } from "../../database/product";
+import { Product } from "../../database/product";
 import { Site } from "../components/layout/Site";
 import { Footer, Header, Main } from "../components/template";
 import { NavigationMenu } from "../components/NavigationMenu";
 import { FooterContent } from "../components/FooterContent";
 import { ProductCard } from "../components/ProductCard";
+import { useSearchCategory } from "../hooks/useSearchCategory";
 
 export function CategoryPage() {
-    //TODO: remover essa lógica para um custom hook chamado useSearchCategory
     const [searchParams] = useSearchParams();
     const categoryName = searchParams.get("name");
+    
+    const filteredProducts = useSearchCategory();
 
-    const filteredProducts = useMemo(() => {
-        if (!categoryName) return products;
-        return products.filter(
-            (product: Product) => product.categoria === categoryName
+    const sectionTitle =
+        filteredProducts
+            .map((product) => product.categoria)
+            .find((name) => name === categoryName) || "Categoria";
+
+
+    function Fallback() {
+        return (
+            <p className="text-center text-gray-400 my-8">
+                Nenhum produto encontrado nesta categoria.
+            </p>
         );
-    }, [categoryName]);
+    }
 
     return (
         <Site>
@@ -27,18 +35,19 @@ export function CategoryPage() {
             <Main>
                 <section className="container mx-auto my-8">
                     <h1 className="text-3xl font-bold mb-6">
-                        {categoryName || "Todos os produtos"}
+                        {sectionTitle}
                     </h1>
                     {filteredProducts.length > 0 ? (
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                             {filteredProducts.map((product: Product) => (
-                                <ProductCard key={product.id} product={product} />
+                                <ProductCard
+                                    key={product.id}
+                                    product={product}
+                                />
                             ))}
                         </div>
                     ) : (
-                        <p className="text-center text-gray-400 my-8">
-                            Nenhum produto encontrado nesta categoria.
-                        </p>
+                        <Fallback />
                     )}
                 </section>
             </Main>
