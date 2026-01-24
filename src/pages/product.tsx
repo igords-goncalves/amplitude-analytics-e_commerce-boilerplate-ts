@@ -1,29 +1,12 @@
-import { useMemo, useState } from "react";
-import { useSearchParams } from "react-router";
-import products, { Product } from "../../database/product";
 import { Site } from "../components/layout/Site";
 import { Footer, Header, Main } from "../components/template";
 import { NavigationMenu } from "../components/NavigationMenu";
 import { FooterContent } from "../components/FooterContent";
-import { Image } from "../components/_commons/Image";
-import { AddToCartButton } from "../feature/AddToCartButton";
-import { PurchaseButton } from "../feature/PurchaseButton";
-import { getProductRate } from "../utils/getProductRate";
-import { Star, Minus, Plus, FileText, ShoppingCart } from "lucide-react";
 import ProductInfos from "../components/ProductInfos";
+import { useSearchProduct } from "../hooks/useSearchProduct";
 
 export function ProductPage() {
-    const [searchParams] = useSearchParams();
-    const productId = searchParams.get("id");
-   
-    const filteredProduct = useMemo(() => {
-        if (!productId) return null;
-
-        return (
-            products.find((product: Product) => +product.id === +productId) ||
-            null
-        );
-    }, [productId]);    
+    const filteredProduct = useSearchProduct();
 
     function Fallback() {
         return (
