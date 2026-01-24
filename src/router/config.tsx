@@ -8,6 +8,8 @@ import DocsIndex from "../pages/docs/index.mdx";
 import DocsEvents from "../pages/docs/analytics/events.mdx";
 import DocsFeatures from "../pages/docs/features/index.mdx";
 import { ProtectedRoute } from "../components/ProtectedRoute";
+import path from "path";
+import { CategoryPage } from "../pages/category";
 
 
 export const routesBasePaths = [
@@ -18,6 +20,10 @@ export const routesBasePaths = [
     {
         path: "/product",
         jsxElement: <ProductPage />,
+    },
+    {
+        path: "/category",
+        jsxElement: <CategoryPage />,
     },
     {
         path: "/cart",

@@ -1,11 +1,5 @@
+import { categories } from "../constants/categories";
 import { CategoryCard } from "./CategoryCard";
-
-const categories = [
-    { name: "Framework", image: "" },
-    { name: "Biblioteca", image: "" },
-    { name: "Linguagem", image: "" },
-    { name: "Ferramenta", image: "" },
-];
 
 export function CategoriesSwipper() {
     return (
@@ -14,7 +8,11 @@ export function CategoriesSwipper() {
                 Principais categorias
             </h2>
             {categories.map((category, index) => (
-                <CategoryCard key={index} category={category} />
+                <CategoryCard
+                    key={index}
+                    color={category.color}
+                    name={category.name}
+                />
             ))}
         </section>
     );

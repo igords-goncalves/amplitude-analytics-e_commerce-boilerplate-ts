@@ -25,21 +25,26 @@ Estado atual do projeto:
 
     Criação de páginas:
         ✔ Página Inicial (HomePage); @done(26-01-08 09:39)
-        ☐ Página de Produto (ProductPage);
-        ☐ Página do Carrinho (CartPage);
-        ☐ Página de Checkout (CheckoutPage);
+        ✔ Página de Produto (ProductPage); @done(26-01-24 15:06)
+        ✔ Página do Carrinho (CartPage); @done(26-01-24 15:06)
+        ✔ Página de Checkout (CheckoutPage); @done(26-01-24 15:06)
+        ✔ Página de Categoria (CategoryPage); @done(26-01-19 22:52)
 
     Tarefas priorizadas (curto prazo):
         1) Páginas principais (prioridade: Home, Product):
             ☐ Home (lista de categorias, banner promocional, products grid);
+                ☐ Busca rápida / filtro por categoria
+                ☐ Preview do carrinho (mini-cart dropdown)
             ☐ Product (detalhes, seleção de quantidade, Comprar Agora, Adicionar ao Carrinho);
+                ☐ Sessão de produtos recomendados na página de produtos
+                ☐ Modal de reviews sobre o produto
             ☐ Cart (lista, edição de quantidades, remoção);
             ☐ Checkout (3 etapas: compra, envio/pagamento, confirmação);
-
+        
         2) Implementação de navegação e rotas:
-            ☐ Adicionar/configurar React Router: rotas /, /product/:id, /cart, /checkout
+            ✔ Adicionar/configurar React Router: rotas /, /product/:id, /cart, /checkout @done(26-01-19 22:11)
             ☐ Garantir funcionamento de links 'Comprar Agora' e histórico de navegação
-            ☐ Criar um sistema de rotas p/ documentoção com mdx
+            ✔ Criar um sistema de rotas p/ documentoção com mdx @done(26-01-19 22:12)
 
         3) Componentes críticos e comportamentais:
             ☐ Header/Nav com cart acessível em todas as páginas (dropdown/mini-cart opcional)
@@ -54,7 +59,7 @@ Estado atual do projeto:
 
 #FASE 2:            
     1) Tracking & Experimentos:
-        ☐ Implementar inicializador para GA4 / GTM
+        ☐ Implementar inicializador para GA4 / GTM / Amplitude
         ☐ Integrar Amplitude (eventos: page_view, add_to_cart, remove_from_cart, begin_checkout, purchase)
         ☐ Adicionar Hotjar (opcional, só em staging/prod)
         ☐ Instrumentar ExperimentWrapper para A/B tests e toggles
@@ -71,12 +76,12 @@ Estado atual do projeto:
 Organização por fases (mapa rápido):
     
     # FASE 1 — UI & Core:
-        - Prototipação (wireframes, design prompts) ☐
-        - Navegação e páginas (Home, Product, Cart, Checkout) ☐
-        - Componentes comuns e de layout (Header, Hero, Footer, Button, Image, Spinner) ☐
-        - Testes unitários básicos ☐
+        - Prototipação (wireframes, design prompts)
+        - Navegação e páginas (Home, Product, Cart, Checkout)
+        - Componentes comuns e de layout (Header, Hero, Footer, Button, Image, Spinner)
+        - Testes unitários básicos
 
     # FASE 2 — Tracking, Experimentos e Observabilidade:
-        - GA4 / GTM / Amplitude / Hotjar ☐
-        - Instrumentação de eventos e validação ☐
-        - Suporte a experimentos e feature flags ☐
+        - GA4 / GTM / Amplitude / Hotjar
+        - Instrumentação de eventos e validação
+        - Suporte a experimentos e feature flags

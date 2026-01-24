@@ -1,31 +1,51 @@
 import { ChevronDown, SearchIcon, ShoppingCart } from "lucide-react";
 import { Button, Dropdown, Image, Input } from "./_commons";
 import techstacklogo from "../assets/images/tech-stack-logo.svg";
+import { useNavigate } from "react-router";
+import { useNavigateCategory } from "../hooks/useNavigateCategory";
 
 function DropdownItems() {
+    const { handleNavigateToCategory } = useNavigateCategory();
+
     return (
         <>
             <a
                 className="block px-3 py-2 text-sm font-medium rounded-md text-neutral-400 hover:bg-white/5 hover:text-text-dark"
                 href="#"
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigateToCategory("Framework");
+                }}
             >
                 Framework
             </a>
             <a
                 className="block px-3 py-2 text-sm font-medium rounded-md text-neutral-400 hover:bg-white/5 hover:text-text-dark"
                 href="#"
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigateToCategory("Biblioteca");
+                }}
             >
                 Biblioteca
             </a>
             <a
                 className="block px-3 py-2 text-sm font-medium rounded-md text-neutral-400 hover:bg-white/5 hover:text-text-dark"
                 href="#"
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigateToCategory("Linguagem");
+                }}
             >
                 Linguagem
             </a>
             <a
                 className="block px-3 py-2 text-sm font-medium rounded-md text-neutral-400 hover:bg-white/5 hover:text-text-dark"
                 href="#"
+                onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigateToCategory("Ferramenta");
+                }}
             >
                 Ferramenta
             </a>

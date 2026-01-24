@@ -4,8 +4,11 @@ import { AddToCartButton } from "../feature/AddToCartButton";
 import { PurchaseButton } from "../feature/PurchaseButton";
 import { Image } from "./_commons";
 import { getProductRate } from "../utils/getProductRate";
+import { useNavigateProduct } from "../hooks/useNavigateProduct";
 
 export function ProductCard({ product }: { product: Product }) {
+    const { handleNavigateToProduct } = useNavigateProduct();
+
     return (
         <div className="flex flex-col justify-between gap-4 p-4  bg-[#232323] rounded-lg">
             <Image
@@ -15,7 +18,13 @@ export function ProductCard({ product }: { product: Product }) {
             />
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                    <a href="#">
+                    <a
+                        href="#"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            handleNavigateToProduct(String(product.id));
+                        }}
+                    >
                         <h2 className="font-bold hover:underline hover:text-blue-500">
                             {product.nome}
                         </h2>
